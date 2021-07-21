@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../assets/beach.jpg');
+  background-size: cover;
+  font-family: 'Poppins';
+}
+
+.info-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.profile-image {
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 16px;
+}
+
+.author-name {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #2e2e2e;
+  font-weight: 600;
+}
+
+.info-button {
+  width: 80vw;
+  max-width: 300px;
+  text-decoration: none;
+  padding: 16px;
+  border: 2px solid #2e2e2ec7;
+  color: #2e2e2ec7;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.info-button:hover {
+  background-color: #2e2e2ec7;
+  border-color: transparent;
+  color: white;
+}

@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
+:root {
+  --primary-green: rgb(27, 190, 90);
+  --secondary-green: rgb(0, 110, 42);
+}
+
+.header {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 64px;
+  padding: 0 2% 0 10%;
+  color: white;
+  position: relative;
+}
+
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -6;
+  background-size: cover;
+  background-image: url('../assets/background-2.jpg');
+  filter: brightness(70%);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__logo-text {
+  font-size: 6rem;
+  font-weight: 800;
+  width: min-content;
+  position: relative;
+}
+
+.header__logo-text--decoration {
+  background-color: var(--primary-green);
+  position: absolute;
+  width: 220%;
+  left: -100%;
+  height: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.5rem;
+  width: 100%;
+  padding: 0 12rem;
+  z-index: 100;
+}
+
+.nav--hidden {
+  display: none;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.nav__main {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  height: 4rem;
+  transition: all 0.3s;
+}
+
+.nav__logo-text {
+  cursor: default;
+  margin-left: 6px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  padding: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+
+.section {
+  padding: 8rem 12rem 0;
+  min-height: 100vh;
+}
+
+.section-title {
+  display: block;
+  font-size: 4.5rem;
+  padding: 12px 0 12px 10px;
+  color: white;
+  position: relative;
+  margin: 16px 0 32px;
+  width: fit-content;
+  /* border-bottom: 2px solid red; */
+}
+
+.section-title__decoration {
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  background-color: var(--primary-green);
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: -5;
+}
+
+.tip-image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4px;
+}
+
+.tips-container {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: 100px 1fr;
+  row-gap: 32px;
+  column-gap: 32px;
+}
+
+.tip-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 2.5rem;
+}
+
+.plant-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
+.plant-gallery--image {
+  width: 100%;
+  border-radius: 4px;
+  transition: transform 0.5s;
+  filter: brightness(90%);
+}
+
+.plant-gallery--special-image {
+  cursor: pointer;
+}
+
+.plant-gallery--image:hover {
+  z-index: 10;
+  transform: scale(1.05);
+  filter: brightness(100%)
+}
+
+.section--suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min-content;
+}
+
+.btn-suggestion {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 24px 64px;
+  width: fit-content;
+  font-size: 2.5rem;
+  margin: 6rem;
+  border-radius: 48px;
+  cursor: pointer;
+}
+
+.btn-suggestion:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-suggestion:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(27, 27, 27);
+  height: 30vh;
+  color: white;
+}
+
+.author-credits {
+  font-size: 14px;
+  padding-bottom: 16px;
+}
+
+.author-contact-info {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
+.author-contact-info:hover{
+  color: var(--primary-green);
+}
+
+.credits {
+  color:rgb(78, 78, 78);
+  margin-top: 12px;
+  font-size: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color:rgb(92, 92, 92);
+  cursor: pointer;
+}
+
+
