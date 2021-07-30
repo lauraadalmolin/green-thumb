@@ -15,6 +15,7 @@ body {
 
 :root {
   --primary-green: rgb(27, 190, 90);
+  --primary-hover: rgb(10, 175, 74);
   --secondary-green: rgb(0, 110, 42);
 }
 
@@ -73,6 +74,7 @@ body {
   width: 100%;
   padding: 0 12rem;
   z-index: 100;
+  box-shadow: 0 1px 12px 2px rgba(94, 94, 94, 0.199);
 }
 
 .nav--hidden {
@@ -120,9 +122,23 @@ body {
   color: var(--primary-green);
   text-decoration: none;
   display: block;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 
+.nav__highlight:link,
+.nav__highlight:visited {
+  padding: 16px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background-color: var(--primary-green);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 48px;
+}
+
+.nav__highlight:hover {
+  background-color: var(--primary-hover);
+}
 
 .section {
   padding: 8rem 12rem 0;
