@@ -6,33 +6,43 @@ const contentTypeInput = document.getElementById('content-type');
 const contentTitleInput = document.getElementById('content-title');
 const contentDescriptionInput = document.getElementById('content-description');
 
-const requiredElements = [nameInput, emailInput, contentTypeInput, contentTitleInput];
+const requiredElements = [nameInput, contentTypeInput, contentTitleInput];
 
 
-const checkIfContentIsEmpty = (event, element) => {
-  const errorElement = document.createElement('span');
-  errorElement.classList.add('input-error__message');
-  errorElement.textContent = 'Esse campo é obrigatório!';
-  
-  const content = event.target.value;
-  const parent = element.parentNode;
-  const lastChild = parent.lastChild;
+const validateInput = (element, testCondition) => {
+  const errorElement = element.nextElementSibling;
 
-  if (!content && lastChild.tagName !== 'SPAN') {
+  if (testCondition) {
+    errorElement.classList.remove('hidden');
     element.classList.add('input-error');
-    parent.appendChild(errorElement);
-  } 
-  
-  if (content && lastChild.tagName === 'SPAN') {
+  } else {
+    errorElement.classList.add('hidden');
     element.classList.remove('input-error');
-    parent.removeChild(parent.lastChild);
   } 
+
 };
 
 requiredElements.forEach(element => {
   element.addEventListener('keyup', (event) => {
-    checkIfContentIsEmpty(event, element);
+    const content = event.target.value;
+    const testCondition = !content;
+
+    validateInput(element, testCondition);
   });
 });
 
+
+
+
+emailInput.addEventListener('keyup', (event) => {
+  const content = event.target.value;
+
+  // validação de e-mail com regex
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  console.log(re.test(content))
+  const testCondition = !content || !re.test(content);
+  console.log(testCondition)
+  
+  validateInput(emailInput, testCondition);
+});
 

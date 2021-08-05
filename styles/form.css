@@ -86,3 +86,7 @@ textarea, input {
 .submit-button:hover {
   background-color: var(--primary-hover);
 }
+
+.hidden {
+  opacity: 0;
+}
