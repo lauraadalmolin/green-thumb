@@ -17,6 +17,7 @@ body {
   --primary-green: rgb(27, 190, 90);
   --primary-hover: rgb(10, 175, 74);
   --secondary-green: rgb(0, 110, 42);
+  --warning: rgb(250, 75, 75);
 }
 
 .header {

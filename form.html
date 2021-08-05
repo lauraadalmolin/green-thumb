@@ -37,16 +37,27 @@
     <main class="main-container">
       <h1 class="form-title">Tem alguma sugestão de conteúdo?</h1>
       <form class="form">
-        <span class="input-title">Nome completo</span>
-        <input class="lad-input lad-input--simple" placeholder="Fulaninha da Silva">
-        <span class="input-title">E-mail</span>
-        <input class="lad-input lad-input--simple" placeholder="fulaninha.silva@gmail.com">
-        <span class="input-title">Tipo de conteúdo</span>
-        <input class="lad-input lad-input--simple" placeholder="Planta, dica, curiosidade...">
-        <span class="input-title">Título do conteúdo</span>
-        <input class="lad-input lad-input--simple" placeholder="Tudo que você precisa saber sobre begônias">
-        <span class="input-title lad-input--large">Descrição</span>
-        <textarea class="lad-input" placeholder="Begônias gostam de pouca água e de meia sombra..." rows="6"></textarea>
+        <div class="input-container">
+          <span class="input-title">Nome completo*</span>
+          <input id="name" class="lad-input lad-input--simple" placeholder="Fulaninha da Silva">
+        </div>
+        <div class="input-container">
+          <span class="input-title">E-mail*</span>
+          <input id="email" class="lad-input lad-input--simple" placeholder="fulaninha.silva@gmail.com">
+        </div>
+        <div class="input-container">
+          <span class="input-title">Tipo de conteúdo*</span>
+          <input id="content-type" class="lad-input lad-input--simple" placeholder="Planta, dica, curiosidade...">
+        </div>
+        <div class="input-container">
+          <span class="input-title">Título do conteúdo*</span>
+          <input id="content-title" class="lad-input lad-input--simple" placeholder="Tudo que você precisa saber sobre begônias">
+        </div>
+        <div class="input-container">
+          <span class="input-title lad-input--large">Descrição</span>
+          <textarea id="content-description" class="lad-input" placeholder="Begônias gostam de pouca água e de meia sombra..." rows="6"></textarea>
+        </div>
+        
         <span class="submit-button">Enviar</span>
       </form>
     </main>
@@ -56,4 +67,5 @@
     <a class="author-contact-info" target="_blank" href="author.html">Laura A. Dalmolin</a>
     <div class="credits">Icons made by <a class="link" target="_blank" href="https://www.freepik.com" title="Freepik">Freepik</a> from <a class="link" target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
   </footer>
+  <script src="scripts/form-validator.js"></script>
 </html>

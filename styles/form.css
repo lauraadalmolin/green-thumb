@@ -15,6 +15,14 @@ textarea, input {
   padding: 16px 0px;
 }
 
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 8px;
+  min-height: 7.8rem;
+}
+
 .form-title {
   color: var(--primary-green);
   margin: 4rem 0 1rem;
@@ -26,7 +34,6 @@ textarea, input {
   width: 100%;
   box-sizing: border-box;
   padding-left: 12px;
-  margin-bottom: 16px;
   border: 1px solid rgb(104, 104, 104);
   border-radius: 4px;
 }
@@ -50,6 +57,17 @@ textarea, input {
   color: var(--primary-green);
   font-size: 1.5rem;
   padding-bottom: 4px;
+}
+
+.input-error {
+  border-color: var(--warning) !important;
+}
+
+.input-error__message {
+  color: var(--warning);
+  font-size: 1rem;
+  padding-top: 4px;
+  width: 100%;
 }
 
 .submit-button {
