@@ -2,6 +2,8 @@ const nav = document.querySelector('.nav');
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 
+const orchid = document.querySelector('.orchid');
+
 const stickyNav = function (entries) {
   const [entry] = entries;
   if (entry.isIntersecting) {
@@ -19,6 +21,10 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight+80}px`,
 });
 headerObserver.observe(header);
+
+orchid.addEventListener('click', event => {
+  window.location = "plant-detail.html";
+});
 
 // // Reveal sections
 // const allSections = document.querySelectorAll('.section');
