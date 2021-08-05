@@ -1,0 +1,22 @@
+.plant-details-header {
+  background-image: url('../assets/sunset.png');
+}
+
+#section--3 {
+  background-color: rgba(0, 0, 0, 0.644);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#video-label {
+  color: white;
+  font-size: 4rem;
+  padding: 0 0 4.5rem 0;
+}
+
+iframe {
+  width: 60vw;
+  height: calc(60vw * 0.5625);
+}
