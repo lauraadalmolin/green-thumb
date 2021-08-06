@@ -39,9 +39,7 @@ emailInput.addEventListener('keyup', (event) => {
 
   // validação de e-mail com regex
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  console.log(re.test(content))
   const testCondition = !content || !re.test(content);
-  console.log(testCondition)
   
   validateInput(emailInput, testCondition);
 });
